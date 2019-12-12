@@ -31,9 +31,6 @@ img {
     width: 100%;
 }
 
-.separator {
-    border-bottom: 1px solid rgb(151, 151, 151);
-}
 
 .check {
     border: 1px solid blue;
@@ -163,6 +160,7 @@ img {
     font-size: 19px;
     line-height: 1.4;
     padding-top: 1rem;
+    padding-bottom: 5rem;
 }
 
 .head-xlarge {
@@ -249,6 +247,7 @@ img {
     padding: 2rem 0 2rem;
     user-select: none;
     cursor: pointer;
+    border-bottom: 1px solid rgb(151, 151, 151);
 }
 
 #roles {
@@ -260,6 +259,7 @@ img {
     /* color: #eee; */
     /* text-transform: cap; */
     min-width: 5rem;
+    border-bottom: 1px solid rgb(151, 151, 151);
 
 }
 
@@ -366,6 +366,8 @@ img {
     padding-bottom: 3rem;
     grid-template-columns: repeat(2, 250px);
     grid-template-rows: 50px;
+    border-top: 1px solid rgb(151, 151, 151);
+
 }
 
 
