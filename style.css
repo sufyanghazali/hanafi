@@ -1,0 +1,416 @@
+/***********************************************************************
+*
+*   GLOBAL STYLES FOR ALL PAGES
+*
+***********************************************************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+html {
+    font-size: 13px;
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: #444;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.separator {
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.check {
+    border: 1px solid blue;
+}
+
+.debug {
+    border: 1px solid red;
+
+}
+
+/***********************************************************************
+*
+*   LAYOUT
+*
+***********************************************************************/
+
+.flex {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fl-grow {
+    flex-grow: 1;
+    min-height: 600px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+}
+
+.container {
+    padding: 0 5rem;
+}
+
+.body-wrap {
+    width: 51rem;
+    margin: 3em auto 0;
+    /* might want some padding */
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w75 {
+    width: 75%;
+}
+
+.w100 {
+    width: 100%
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.h100 {
+    height: 100%;
+}
+
+/***********************************************************************
+*
+*   SPACING
+*
+***********************************************************************/
+
+.pt-1 {
+    padding-top: 1rem;
+}
+
+.pt-2 {
+    padding-top: 2rem;
+}
+
+.pt-3 {
+    padding-top: 3rem;
+}
+
+.pt-4 {
+    padding-top: 4rem;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
+}
+
+.pb-2 {
+    padding-bottom: 2rem;
+}
+
+.pb-3 {
+    padding-bottom: 3rem;
+}
+
+.pb-4 {
+    padding-bottom: 4rem;
+}
+
+/***********************************************************************
+*
+*   TYPOGRAPHY
+*
+***********************************************************************/
+
+
+.arial {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.times {
+    font-family: "Times New Roman";
+}
+
+.editorial {
+    color: rgb(65, 65, 65);
+    font-size: 19px;
+    line-height: 1.4;
+    padding-top: 1rem;
+}
+
+.head-xlarge {
+    font-size: 12rem;
+    letter-spacing: -5px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.head-large {
+    font-size: 8rem;
+    letter-spacing: -4px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.head-medium {
+    font-size: 6rem;
+    letter-spacing: -3px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.head-small {
+    font-size: 3rem;
+    letter-spacing: -5px;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sub-small {
+    font-size: .8em;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-weight: 400;
+    /* text-transform: uppercase;*/
+}
+
+.copy-text p {
+    text-indent: 2.5em;
+    letter-spacing: 0.2px;
+    margin-bottom: 1em;
+}
+
+.blockquote {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/***********************************************************************
+*
+*   SPECIAL ADJUSTMENTS
+*
+***********************************************************************/
+
+#indent-header {
+    position: relative;
+    left: -6px;
+}
+
+/***********************************************************************
+*
+*   HEADER
+*
+***********************************************************************/
+.header {
+    line-height: 2.5rem;
+    width: 100%;
+    /* padding-bottom: 5rem; */
+}
+
+#namebar {
+    padding: 2rem 0 2rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+#roles {
+    font-family: 'Courier New';
+    margin-left: .7rem;
+    /* font-size: calc(1em * .9); */
+    /* font-weight: 700; */
+    height: 2rem;
+    /* color: #eee; */
+    /* text-transform: cap; */
+    min-width: 5rem;
+
+}
+
+.role:not(:first-child),
+.crumb:not(:first-child),
+.crumb:not(:last-child)::after {
+    padding-left: .7rem;
+}
+
+.breadcrumbs {
+    padding-top: 1rem;
+}
+
+.crumb {
+    font-family: 'Courier New';
+}
+
+.crumb:not(:last-child)::after {
+    /* padding-left: .5rem; */
+    content: ">";
+    font-size: .7em;
+}
+
+/***********************************************************************
+*
+*   INDEX
+*
+***********************************************************************/
+
+.canvas {
+    padding-top: 1rem;
+    height: 100%;
+    position: relative;
+}
+
+
+.project {
+    position: absolute;
+    height: 225px;
+    width: 300px;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+.project-name {
+    display: none;
+    color: white;
+    font-size: 17px;
+    opacity: .9;
+}
+
+.project:hover .project-name {
+    display: block;
+}
+
+.project:hover {
+    cursor: move;
+}
+
+/***********************************************************************
+*
+*   IN FOCUS
+*
+***********************************************************************/
+
+.archive {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 500px; */
+    gap: 0 2.5rem;
+
+}
+
+.title {
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.card {
+    width: 100%;
+}
+
+.test {
+    width: 100%;
+}
+
+/***********************************************************************
+*
+*   FOOTER
+*
+***********************************************************************/
+
+.contact {
+    font-family: 'Courier New',
+        Courier,
+        monospace;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: 50px;
+}
+
+
+.section {
+    position: relative;
+    top: 11px;
+    left: -5px;
+}
+
+.block {
+    height: 8px;
+    width: 38px;
+    margin-right: .5rem;
+}
+
+/***********************************************************************
+*
+*   COLORS
+*
+***********************************************************************/
+
+.red {
+    background: #E01604;
+}
+
+.blue {
+    background: #1139d8;
+}
+
+.pink {
+    background: #FC256D;
+}
+
+.brown {
+    background: #93867F;
+}
+
+.green {
+    background: #00E059;
+}
+
+.yellow {
+    background: #FFF60D;
+}
+
+.grey {
+    background: rgba(0, 0, 0, .75);
+}
