@@ -241,6 +241,40 @@ img {
     bottom: 2rem;
 }
 
+#acne2 {
+    width: 25rem;
+    position: absolute;
+    right: -60%;
+    top: -5rem;
+}
+#acne2 .caption {
+    padding-top: 1rem;
+}
+
+#acne-group {
+    width: 100%;
+    padding: 5rem 0 0;
+}
+
+#acne-g1 {
+    padding-bottom: 20%;
+}
+
+#acne-g2 {
+    margin: auto
+}
+
+#acne-g3 {
+    padding-top: 20%;
+}
+
+#acne-gc {
+    bottom: 5rem;
+    left: 3rem;
+}
+
+
+
 /***********************************************************************
 *
 *   SPECIAL ADJUSTMENTS
