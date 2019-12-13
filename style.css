@@ -7,7 +7,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-
+    position: relative;
 }
 
 html {
@@ -25,12 +25,6 @@ a {
 a:visited {
     color: #444;
 }
-
-img {
-    display: block;
-    width: 100%;
-}
-
 
 .check {
     border: 1px solid blue;
@@ -221,6 +215,32 @@ img {
     margin: 0 auto;
 }
 
+
+/***********************************************************************
+*
+*   IMAGES
+*
+***********************************************************************/
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.caption {
+    position: absolute;
+    font-size: 0.8em;
+}
+
+#acne1 {
+    right: -18rem;
+    bottom: 2rem;
+}
+
 /***********************************************************************
 *
 *   SPECIAL ADJUSTMENTS
@@ -331,7 +351,6 @@ img {
     padding-top: 2rem;
     padding-bottom: 2rem;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: 500px; */
     gap: 0 2.5rem;
 
 }
