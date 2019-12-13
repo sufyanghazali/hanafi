@@ -28,6 +28,12 @@ function cycleRoles(index) {
 roles.addEventListener("click", () => cycleRoles(iDescription));
 
 
+/***********************************************************************
+ *
+ *   ADD DROP SHADOW ON NAVBAR
+ *
+ ***********************************************************************/
+
 const html = document.querySelector("html");
 
 document.addEventListener("scroll", () => {

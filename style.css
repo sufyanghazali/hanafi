@@ -151,7 +151,7 @@ a:visited {
 
 .editorial {
     color: rgb(65, 65, 65);
-    font-size: 1px;
+    font-size: 18px;
     line-height: 1.4;
     padding-top: 1rem;
     /* padding-bottom: 5rem; */
@@ -305,8 +305,6 @@ img {
     line-height: 2.5rem;
     width: 100%;
     z-index: 10;
-    /* box-shadow: 0px 1px 12px rgba(151, 151, 151, .5); */
-    /* padding-bottom: 5rem; */
 }
 
 .header+* {
