@@ -151,7 +151,7 @@ a:visited {
 
 .editorial {
     color: rgb(65, 65, 65);
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.4;
     padding-top: 1rem;
     /* padding-bottom: 5rem; */
@@ -198,6 +198,7 @@ a:visited {
 }
 
 .copy-text p {
+    font-family: 'Times New Roman', Times, serif;
     text-indent: 2.5em;
     letter-spacing: 0.2px;
     margin-bottom: 1em;
@@ -248,6 +249,7 @@ img {
     right: -60%;
     top: 0;
 }
+
 #acne2 .caption {
     padding-top: 1rem;
 }
@@ -255,6 +257,10 @@ img {
 #acne-group {
     width: 100%;
     padding: 0 auto;
+}
+
+#acne-group > div {
+    width: 65%;
 }
 
 #acne-g1 {
@@ -299,11 +305,12 @@ img {
     line-height: 2.5rem;
     width: 100%;
     z-index: 10;
+    box-shadow: 0px 1px 12px rgba(151, 151, 151, .5);
     /* padding-bottom: 5rem; */
 }
 
-.header + * {
-    margin-top: 131px;
+.header+* {
+    margin-top: 144px;
 }
 
 #namebar {
@@ -334,6 +341,7 @@ img {
 
 .breadcrumbs {
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .crumb {
@@ -412,6 +420,11 @@ img {
 
 .test {
     width: 100%;
+}
+
+.testing {
+    width: 715px;
+
 }
 
 /***********************************************************************
