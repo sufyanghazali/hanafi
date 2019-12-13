@@ -27,3 +27,16 @@ function cycleRoles(index) {
 
 roles.addEventListener("click", () => cycleRoles(iDescription));
 
+
+const html = document.querySelector("html");
+
+html.addEventListener("wheel", () => {
+    if (html.scrollTop > 0) {
+        console.dir(document.querySelector(".header"));
+        document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
+    }
+
+    if (html.scrollTop == 0) {
+        document.querySelector(".header").style.boxShadow = "";
+    }
+});
