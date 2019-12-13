@@ -71,8 +71,8 @@ a:visited {
 }
 
 .body-wrap {
-    width: 51rem;
-    margin: 3em auto 0;
+    width: 715px;
+    margin: 3em auto;
     /* might want some padding */
 }
 
@@ -154,7 +154,7 @@ a:visited {
     font-size: 19px;
     line-height: 1.4;
     padding-top: 1rem;
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
 }
 
 .head-xlarge {
@@ -181,16 +181,16 @@ a:visited {
     text-transform: uppercase;
 }
 
-.head-small {
-    font-size: 3rem;
-    letter-spacing: -5px;
-    line-height: 1;
+.head-s {
+    font-size: 4rem;
+    letter-spacing: px;
+    line-height: 1.2;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.sub-small {
-    font-size: .8em;
+.sub-s {
+    font-size: .75em;
     letter-spacing: 0.5px;
     line-height: 1.4;
     font-weight: 400;
@@ -225,6 +225,7 @@ a:visited {
 img {
     display: block;
     width: 100%;
+    margin: 1em;
 }
 
 .w25 {
@@ -245,7 +246,7 @@ img {
     width: 25rem;
     position: absolute;
     right: -60%;
-    top: -5rem;
+    top: 0;
 }
 #acne2 .caption {
     padding-top: 1rem;
@@ -253,7 +254,7 @@ img {
 
 #acne-group {
     width: 100%;
-    padding: 5rem 0 0;
+    padding: 0 auto;
 }
 
 #acne-g1 {
@@ -291,10 +292,18 @@ img {
 *   HEADER
 *
 ***********************************************************************/
+
 .header {
+    background: white;
+    position: fixed;
     line-height: 2.5rem;
     width: 100%;
+    z-index: 10;
     /* padding-bottom: 5rem; */
+}
+
+.header + * {
+    margin-top: 131px;
 }
 
 #namebar {
