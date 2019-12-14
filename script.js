@@ -38,7 +38,6 @@ const html = document.querySelector("html");
 
 document.addEventListener("scroll", () => {
     if (html.scrollTop > 0) {
-        console.dir(document.querySelector(".header"));
         document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
     }
 

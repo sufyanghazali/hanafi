@@ -183,7 +183,6 @@ a:visited {
 
 .head-s {
     font-size: 4rem;
-    letter-spacing: px;
     line-height: 1.2;
     font-weight: 400;
     text-transform: uppercase;
@@ -226,7 +225,6 @@ a:visited {
 img {
     display: block;
     width: 100%;
-    margin: 1em;
 }
 
 .w25 {
@@ -235,11 +233,12 @@ img {
 
 .caption {
     position: absolute;
-    font-size: 0.8em;
+    font-size: 12px;
+    color: rgb(151, 151, 151);
 }
 
 #acne1 {
-    right: -18rem;
+    right: -16rem;
     bottom: 2rem;
 }
 
@@ -259,7 +258,7 @@ img {
     padding: 0 auto;
 }
 
-#acne-group > div {
+#acne-group>div {
     width: 65%;
 }
 
@@ -314,21 +313,18 @@ img {
 #namebar {
     padding: 2rem 0 2rem;
     user-select: none;
-    cursor: pointer;
     border-bottom: 1px solid rgb(151, 151, 151);
 }
 
 #roles {
     font-family: 'Courier New';
     margin-left: .7rem;
-    /* font-size: calc(1em * .9); */
-    /* font-weight: 700; */
-    height: 2rem;
-    /* color: #eee; */
-    /* text-transform: cap; */
+    height: 2.4rem;
     min-width: 5rem;
     border-bottom: 1px solid rgb(151, 151, 151);
-
+    cursor: pointer;
+    top: 1px;
+    font-size: 15px;
 }
 
 .role:not(:first-child),
@@ -423,6 +419,134 @@ img {
 .testing {
     width: 715px;
 
+}
+
+/***********************************************************************
+*
+*   RICK OWENS
+*
+***********************************************************************/
+
+#rick-owens {
+    font-size: 23px;
+}
+
+#ro-head {
+    left: 160px;
+    font-size: 70px;
+    width: 700px;
+    margin-bottom: 1em;
+}
+
+#ro-sub {
+    width: 920px;
+    font-size: 41.5px;
+    font-weight: 700;
+    left: 322px;
+    top: 50px;
+    margin-bottom: 2em;
+}
+
+#ro-prof {
+    width: 205px;
+    left: 193px;
+}
+
+#ro-baker {
+    width: 280px;
+    position: absolute;
+    top: 188px;
+    left: 970px;
+}
+
+#ro-runway {
+    height: 750px;
+}
+
+#ro-glitter {
+    width: 260px;
+    left: 40px;
+    top: 20px;
+}
+
+#ro-cyclops {
+    width: 260px;
+    left: 280px;
+    top: 170px;
+}
+
+#ro-swatch {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+#swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50px;
+}
+
+#ro-s1 {
+    background: #231f20;
+}
+
+#ro-s2 {
+    background: #545456;
+}
+
+#ro-s3 {
+    background: #8f615b;
+}
+
+#ro-s4 {
+    background: #bcb08d;
+}
+
+#ro-s5 {
+    background: #f1d0ac;
+}
+
+#ro-s6 {
+    background: #9bb5b6;
+}
+
+#ro-swatch {
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+#sw-cap {
+    text-align: right;
+    right: 0;
+    width: 200px;
+}
+
+#ro-peggy {
+    width: 251px;
+    left: 864px;
+    top: -75px;
+}
+
+.swatch {
+    background: red;
+}
+
+.ro-bq {
+    width: 860px;
+    font-size: 41.5px;
+    font-weight: 700;
+    margin: 2em 0;
+    padding-bottom: 1em;
+}
+
+.ro-wrap {
+    margin-right: 0px;
+    margin-left: 535px;
+}
+
+.ro-cap-1 {
+    margin-top: 1rem;
 }
 
 /***********************************************************************

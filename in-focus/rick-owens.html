@@ -3,6 +3,7 @@
 <html class="h100">
 
 <head>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="../style.css" rel="stylesheet">
 </head>
 
@@ -24,7 +25,7 @@
             </div>
         </div>
     </header>
-    <main class="editorial">
+    <main id="rick-owens" class="editorial">
         <!-- <div class="container flex row">
             <div class="w50">
                 <p class="head-s">The American in Paris;</P>
@@ -46,44 +47,42 @@
         </div> -->
 
         <div class="container">
-            <div class="flex row testing">
-                <div class="w75">
-                    <p class="head-s">The American in Paris;</P>
-                    <!-- <h1 class="head-s">Rick Owens</h1> -->
 
-                    <div class="center">
-                        <p class="sub-small w50 center flex-center p2-em">Rick Owens is a man who never was really
-                            interested in the clothes’ for clothes sake, so much so as it was the perfect medium for him
-                            to
-                            explore
-                            aesthetic challenges to conservative norms in exaggeratedly brilliant...clothes and
-                            presentations.
-                        </p>
+            <p class="head-s" id="ro-head">The American in Paris;</P>
+            <!-- <h1 class="head-s">Rick Owens</h1> -->
+
+            <div class="flex row pt-2">
+                <div id="ro-prof">
+                    <img src="../images/rick-owens/rick-owens.jpg">
+                    <div>
+                        <span class="caption ro-cap-1">(above) Rick Owens</span>
                     </div>
-
                 </div>
-                <div class="w25">
-                    <img class src="../images/rick-owens/rick-owens.jpg">
+
+                <div>
+                    <p id="ro-sub" class="sub-small times">Rick Owens is a man who never was really interested in the
+                        clothes’ for clothes sake, so much so as it was the perfect medium for him to explore aesthetic
+                        challenges to conservative norms in exaggeratedly brilliant... clothes and presentations.
+                    </p>
                 </div>
             </div>
 
         </div>
+        <div class="body-wrap copy-text drag-y ro-wrap">
 
-
-        <div class="body-wrap copy-text">
-            <div class="w50">
-                <img class src="../images/rick-owens/bakersfield.jpg">
-            </div>
 
             <p>
                 Close your eyes. Think, of brooding otherworldly men and women slink by the room in monochrome
-                lean-layered silhouettes; priestly hues of dusty greys, beige, khaki and black. And you have
-                just
-                arrived
-                at visions of the monastic gothic tribe of Rick Owens, who once described his inspirations as a
-                trio of
-                the ‘biblical, brutalist and Bakersfield’.
+                lean-layered silhouettes; priestly hues of dusty greys, beige, khaki and black. And you have just
+                arrived at visions of the monastic gothic tribe of Rick Owens, who once described his inspirations as a
+                trio of the ‘biblical, brutalist and Bakersfield’.
             </p>
+            <div id="ro-baker">
+                <img src="../images/rick-owens/bakersfield.jpg">
+                <div>
+                    <span class="caption ro-cap-1">(above) Bakersfield, California</span>
+                </div>
+            </div>
             <p>Born in Southern California, Rick Owens grew up in the conservative town of Porterville. Here, he
                 would
                 feel a dissonance between the culture of his geography and who he believed himself to be. Such a
@@ -93,12 +92,9 @@
                 such limited expectations. In his own words, he ‘became as flamboyant’ as he possibly could -
                 living in
                 a warehouse, wearing platform boots, full make-up and going to bed with gloves still on.</p>
-            <p class="blockquote">“Having an uncomfortable childhood makes for an interesting adulthood, I
-                think...What
-                would have happened
-                if I’d had a completely well-adjusted childhood? I wouldn’t have the rage... the vengeance that
-                I feel
-                now.”</p>
+            <p class="ro-bq">“Having an uncomfortable childhood makes for an interesting adulthood, I think... What
+                would have happened if I’d had a completely well-adjusted childhood? I wouldn’t have the
+                rage... the vengeance that I feel now.”</p>
             <p>Rick’s own trip towards his own namesake label, would stand to be just as unconventional a
                 pathway as
                 could have been - if conventional had meant taking up a design course, graduating, working for a
@@ -119,10 +115,49 @@
                 as
                 poignant as they are for their theatrical value.</p>
         </div>
-        <img class src="../images/rick-owens/fw17-glitter.jpg">
-        <img class src="../images/rick-owens/ss16-cyclops.jpeg">
+        <div id="ro-runway" class="flex row ro-wrap">
+            <div id="ro-glitter">
+                <img class src="../images/rick-owens/fw17-glitter.jpg">
+                <div>
+                    <span class="caption ro-cap-1">Fall 2017, GLITTER;<br>The male figure, bundled in
+                        synthetic
+                        downs to lend it a
+                        ‘voluptious and
+                        elegant’
+                        silhouette. Simultaneously, it figured too like the encasing of fragile vessels, a topical
+                        commentary on the need for protection in these turbulent times, that has seen the year of 2017
+                        as a
+                        battleground of clashing political extremities between the left and right.</span>
+                </div>
+            </div>
+            <div id="ro-cyclops">
+                <img class src="../images/rick-owens/ss16-cyclops.jpeg">
+                <div>
+                    <span class="caption ro-cap-1">Spring 2016, CYCLOPS;<br>The gesture of women hoisting women to speak
+                        of the female bond; sisterhoods that nourish, support and yield love between women.</span>
+                </div>
+            </div>
 
-        <div class="body-wrap copy-text">
+        </div>
+
+        <div id="ro-swatch">
+            <div id="swatch-grid">
+                <div id="ro-s1" class="swatch"></div>
+                <div id="ro-s2" class="swatch"></div>
+                <div id="ro-s3" class="swatch"></div>
+                <div id="ro-s4" class="swatch"></div>
+                <div id="ro-s5" class="swatch"></div>
+                <div id="ro-s6" class="swatch"></div>
+            </div>
+            <div>
+                <span id="sw-cap" class="caption ro-cap-1">(above)<br>A swatch of the prominent hues that figure into
+                    the
+                    work of Rick
+                    Owens.</span>
+            </div>
+        </div>
+
+        <div class="body-wrap copy-text drag-y ro-wrap">
             <p>Viewing these histories and considering Rick’s penchant for an obsessive lifestyle routine of the
                 gym and
                 an ascetic wardrobe of repeated multiples, we find a backbone for a personality that has a
@@ -151,8 +186,11 @@
                 (Spring 2003) had Peggy Lee’s wistful ‘Let’s Love’ belt out over the industrial techno of
                 Autechre as
                 soundtrack...Rick, is all about the love.</p>
+            <div id="ro-peggy"class="drag resize">
+                <img class src="../images/rick-owens/peggy-lee-lets-love.jpg">
+            </div>
         </div>
-        <img class src="../images/rick-owens/peggy-lee-lets-love.jpg">
+
     </main>
 
     <footer>
@@ -178,7 +216,11 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="../temp-layout.js"></script>
     <script src="../script.js"></script>
 </body>
 
