@@ -197,7 +197,7 @@ a:visited {
 }
 
 .copy-text p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Times New Roman;
     text-indent: 2.5em;
     letter-spacing: 0.2px;
     margin-bottom: 1em;
@@ -215,6 +215,9 @@ a:visited {
     margin: 0 auto;
 }
 
+.underline {
+    text-decoration: underline;
+}
 
 /***********************************************************************
 *
@@ -329,7 +332,8 @@ img {
 
 .role:not(:first-child),
 .crumb:not(:first-child),
-.crumb:not(:last-child)::after {
+.crumb:not(:last-child)::after,
+#index-pg::after {
     padding-left: .7rem;
 }
 
@@ -342,10 +346,23 @@ img {
     font-family: 'Courier New';
 }
 
-.crumb:not(:last-child)::after {
-    /* padding-left: .5rem; */
+.crumb:not(:last-child)::after,
+#index-pg::after {
+    position: relative;
+    bottom: 1px;
     content: ">";
     font-size: .7em;
+}
+
+.dropdown {
+    padding: 1rem;
+    position: absolute;
+}
+
+.dropdown,
+.dropdown * {
+    z-index: 1000;
+    background: white;
 }
 
 /***********************************************************************
@@ -358,6 +375,7 @@ img {
     padding-top: 1rem;
     height: 100%;
     position: relative;
+    z-index: 0;
 }
 
 
@@ -428,35 +446,45 @@ img {
 ***********************************************************************/
 
 #rick-owens {
-    font-size: 23px;
+    font-size: 20px;
+    /* font-family: Helvetica, Arial, sans-serif; */
 }
 
 #ro-head {
-    left: 160px;
+    left: 0px;
     font-size: 70px;
     width: 700px;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 #ro-sub {
-    width: 920px;
-    font-size: 41.5px;
+    width: 760px;
+    font-size: 31.5px;
     font-weight: 700;
-    left: 322px;
-    top: 50px;
+    left: 262px;
+    top: 24px;
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
     margin-bottom: 2em;
+    line-height: 1.4;
+    font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 550px;
+    top: 20px;
 }
 
 #ro-prof {
     width: 205px;
-    left: 193px;
+    left: 206px;
 }
 
 #ro-baker {
     width: 280px;
     position: absolute;
     top: 188px;
-    left: 970px;
+    left: 822px;
 }
 
 #ro-runway {
@@ -465,13 +493,13 @@ img {
 
 #ro-glitter {
     width: 260px;
-    left: 40px;
+    left: 0;
     top: 20px;
 }
 
 #ro-cyclops {
     width: 260px;
-    left: 280px;
+    left: 180px;
     top: 170px;
 }
 
@@ -483,8 +511,10 @@ img {
 
 #swatch-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 50px;
+    grid-template-columns: repeat(6, 130px);
+    grid-template-rows: 30px;
+    /* grid-template-rows: repeat(6,30px); */
+    /* grid-template-columns: 130px; */
 }
 
 #ro-s1 {
@@ -518,25 +548,31 @@ img {
 
 #ro-peggy {
     width: 251px;
-    left: 864px;
-    top: -75px;
+    right: 386px;
+    bottom: 210px;
 }
 
 .swatch {
     background: red;
 }
 
-.ro-bq {
-    width: 860px;
-    font-size: 41.5px;
+.copy-text .ro-bq {
     font-weight: 700;
     margin: 2em 0;
-    padding-bottom: 1em;
+    /* padding-bottom: 1em; */
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    width: 550px;
+    text-align: center;
+    text-indent: 0;
+    font-size: 24px;
 }
 
 .ro-wrap {
     margin-right: 0px;
     margin-left: 535px;
+    width: 550px;
+    margin-top: 1em;
 }
 
 .ro-cap-1 {
@@ -544,8 +580,8 @@ img {
 }
 
 .sw-cap {
-    text-align: right;
-    right: 0;
+    /* text-align: right; */
+    /* right: 0; */
     width: 210px;
 }
 
@@ -608,6 +644,10 @@ img {
 
 .yellow {
     background: #FFF60D;
+}
+
+.orange {
+    background: #FF6E00;
 }
 
 .grey {
