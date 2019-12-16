@@ -219,11 +219,20 @@ a:visited {
     text-decoration: underline;
 }
 
+.ghost {
+    opacity: 0.7;
+}
+
+/* .highlight {
+    opacity: 1;
+} */
+
+
 /***********************************************************************
 *
 *   IMAGES
 *
-***********************************************************************/
+********************************x   ***************************************/
 
 img {
     display: block;
@@ -356,7 +365,9 @@ img {
 
 .dropdown {
     padding: 1rem;
-    position: absolute;
+    /* position: absolute; */
+    float: right;
+    top: 32.5px;
 }
 
 .dropdown,
@@ -364,6 +375,7 @@ img {
     z-index: 1000;
     background: white;
 }
+
 
 /***********************************************************************
 *
@@ -550,6 +562,17 @@ img {
     width: 251px;
     right: 386px;
     bottom: 210px;
+}
+
+#ro-peggy,
+#ro-baker {
+    transition-property: opacity;
+    transition-duration: .2s;
+}
+
+#ro-peggy:hover,
+#ro-baker:hover {
+    opacity: 1;
 }
 
 .swatch {
