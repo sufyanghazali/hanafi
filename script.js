@@ -53,8 +53,15 @@ document.addEventListener("scroll", () => {
  * 
  ***********************************************************************/
 
-const dropdown = document.querySelectorAll(".crumb::after");
+// Used JS to add the arrows because using CSS pseudo-elements doesn't allow adding event listeners easily. Other, I'd have to add the arrows in the HTML manually, which would be annoying with increasing pages
+
+
+// const dropdown = document.querySelectorAll(".crumb::after");
 const crumbs = document.querySelectorAll(".crumb");
+
+function newDiv() {
+    return document.createElement("div");
+}
 
 function createArrow() {
     let navArrow = document.createElement("div");
@@ -63,11 +70,22 @@ function createArrow() {
     return navArrow;
 }
 
+function createDropdown() {
+    let dropdown = newDiv();
+    dropdown.classList.add("dropdown", "check");
+    dropdown.textContent = "Hello";
+    return dropdown;
+}
 
 for (let i = 0; i < crumbs.length; i++) {
     let parent = crumbs[i].parentNode;
     newArrow = createArrow();
+
+    console.log("Arrow created");
+
+    dropDiv = createDropdown();
     // Inserts arrow AFTER targeted crumb
+    parent.insertBefore(dropDiv, crumbs[i].nextSibling);
     parent.insertBefore(newArrow, crumbs[i].nextSibling);
     // newArrow.addEventListener("click", () => {
     //     // console.dir(newArrow.nextElementSibling);
@@ -84,5 +102,16 @@ for (let i = 0; i < arrows.length; i++) {
     });
 }
 
+html.addEventListener("click", e => {
+
+    let dropdowns = document.querySelectorAll(".dropdown");
+
+    for (let i = 0; i < dropdowns.length; i++) {
+        if (!dropdowns[i].contains(e.target) && !e.target.parentNode.contains(dropdowns[i])) {
+            dropdowns[i].classList.remove("drop");
+        }
+    }
+
+});
 
 // parentDiv.insertBefore(sp1, sp2.nextSibling);
