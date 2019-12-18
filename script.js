@@ -64,8 +64,6 @@ function createArrow() {
 }
 
 
-
-
 for (let i = 0; i < crumbs.length; i++) {
     let parent = crumbs[i].parentNode;
     newArrow = createArrow();
