@@ -86,5 +86,14 @@ for (let i = 0; i < arrows.length; i++) {
 }
 
 html.addEventListener("click", e => {
-    let menu = document.get
+    let drop = document.querySelector(".drop");
+    
+    // only runs if a dropdown is active
+    if (typeof (drop) != "undefined" && drop != null) {
+
+        // cannot have clicked on the dropdown itself or the arrow (because it'll close it straightaway)
+        if (!drop.contains(e.target) && !e.target.classList.contains("arrow")) {
+            drop.classList.remove("drop");
+        }
+    }
 });
