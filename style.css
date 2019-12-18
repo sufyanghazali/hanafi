@@ -12,7 +12,6 @@
 
 html {
     font-size: 13px;
-    /* font-family: Helvetica, Arial, sans-serif; */
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
@@ -152,7 +151,6 @@ a {
     font-size: 18px;
     line-height: 1.4;
     padding-top: 1rem;
-    /* padding-bottom: 5rem; */
 }
 
 .head-xlarge {
@@ -230,7 +228,7 @@ a {
 *
 *   IMAGES
 *
-********************************x   ***************************************/
+***********************************************************************/
 
 img {
     display: block;
@@ -354,24 +352,12 @@ img {
 }
 
 .arrow {
-    position: relative;
-    bottom: 1px;
-    content: ">";
     font-size: .7em;
     padding-left: .7rem;
     cursor: pointer;
 }
 
-/* .crumb:not(:last-child)::after,
-#index-pg::after {
-    position: relative;
-    bottom: 1px;
-    content: ">";
-    font-size: .7em;
-} */
-
 .dropdown {
-    /* padding: 1rem; */
     display: none;
     padding-left: .7rem;
     position: absolute;

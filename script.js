@@ -70,48 +70,21 @@ function createArrow() {
     return navArrow;
 }
 
-function createDropdown() {
-    let dropdown = newDiv();
-    dropdown.classList.add("dropdown", "check");
-    dropdown.textContent = "Hello";
-    return dropdown;
-}
 
 for (let i = 0; i < crumbs.length; i++) {
     let parent = crumbs[i].parentNode;
     newArrow = createArrow();
-
-    console.log("Arrow created");
-
-    dropDiv = createDropdown();
-    // Inserts arrow AFTER targeted crumb
-    parent.insertBefore(dropDiv, crumbs[i].nextSibling);
     parent.insertBefore(newArrow, crumbs[i].nextSibling);
-    // newArrow.addEventListener("click", () => {
-    //     // console.dir(newArrow.nextElementSibling);
-    //     newArrow.nextElementSibling.classList.toggle("drop");
-    // });
 }
 
 const arrows = document.querySelectorAll(".arrow");
 
 for (let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener("click", () => {
-        // console.dir(newArrow.nextElementSibling);
         arrows[i].nextElementSibling.classList.toggle("drop");
     });
 }
 
 html.addEventListener("click", e => {
-
-    let dropdowns = document.querySelectorAll(".dropdown");
-
-    for (let i = 0; i < dropdowns.length; i++) {
-        if (!dropdowns[i].contains(e.target) && !e.target.parentNode.contains(dropdowns[i])) {
-            dropdowns[i].classList.remove("drop");
-        }
-    }
-
+    let menu = document.get
 });
-
-// parentDiv.insertBefore(sp1, sp2.nextSibling);
