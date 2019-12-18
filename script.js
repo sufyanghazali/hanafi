@@ -45,3 +45,46 @@ document.addEventListener("scroll", () => {
         document.querySelector(".header").style.boxShadow = "";
     }
 });
+
+
+/***********************************************************************
+ *
+ *   DROPDOWN
+ * 
+ ***********************************************************************/
+
+const dropdown = document.querySelectorAll(".crumb::after");
+const crumbs = document.querySelectorAll(".crumb");
+
+function createArrow() {
+    let navArrow = document.createElement("div");
+    navArrow.textContent = ">";
+    navArrow.classList.add("arrow");
+    return navArrow;
+}
+
+
+
+
+for (let i = 0; i < crumbs.length; i++) {
+    let parent = crumbs[i].parentNode;
+    newArrow = createArrow();
+    // Inserts arrow AFTER targeted crumb
+    parent.insertBefore(newArrow, crumbs[i].nextSibling);
+    // newArrow.addEventListener("click", () => {
+    //     // console.dir(newArrow.nextElementSibling);
+    //     newArrow.nextElementSibling.classList.toggle("drop");
+    // });
+}
+
+const arrows = document.querySelectorAll(".arrow");
+
+for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener("click", () => {
+        // console.dir(newArrow.nextElementSibling);
+        arrows[i].nextElementSibling.classList.toggle("drop");
+    });
+}
+
+
+// parentDiv.insertBefore(sp1, sp2.nextSibling);
