@@ -362,12 +362,11 @@ img {
     padding-left: .7rem;
     position: absolute;
     left: 100%;
-    top:100%;
+    top: 100%;
 }
 
 .dropdown,
 .dropdown * {
-    z-index: 1000;
     background: white;
 }
 
@@ -376,8 +375,9 @@ img {
 }
 
 #drop {
-    display: block; 
+    display: block;
 }
+
 /***********************************************************************
 *
 *   INDEX

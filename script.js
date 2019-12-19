@@ -46,18 +46,17 @@ document.addEventListener("scroll", () => {
     }
 });
 
-
 /***********************************************************************
  *
- *   DROPDOWN
+ *   DROPDOWN (depreciated)
  * 
  ***********************************************************************/
 
-// Used JS to add the arrows because using CSS pseudo-elements doesn't allow adding event listeners easily. Other, I'd have to add the arrows in the HTML manually, which would be annoying with increasing pages
-
-
-// const dropdown = document.querySelectorAll(".crumb::after");
 const dropdowns = document.querySelectorAll(".drop-wrap");
+
+function areSiblings(e1, e2) {
+    return e1 != e2 && e1.parentNode == e2.parentNode;
+}
 
 function newDiv() {
     return document.createElement("div");
@@ -70,7 +69,6 @@ function createArrow() {
     return navArrow;
 }
 
-
 for (let i = 0; i < dropdowns.length; i++) {
     let parent = dropdowns[i];
     newArrow = createArrow();
@@ -79,29 +77,40 @@ for (let i = 0; i < dropdowns.length; i++) {
 
 const arrows = document.querySelectorAll(".arrow");
 
-for (let i = 0; i < arrows.length; i++) {
-
-    arrows[i].addEventListener("click", () => {
-        let dd = arrows.nextElementSibling
-        if (typeof (dd) != "undefined" && dd != null) {
-            if (dd.id = "") {
-                dd.id = "drop"
-            } else {
-                dd.id = "";
-            }
-        }
-    }); 
-}
-
 html.addEventListener("click", e => {
     let drop = document.querySelector("#drop");
 
-    // only runs if a dropdown is active
-    if (typeof (drop) != "undefined" && drop != null) {
 
+    if (typeof (drop) != "undefined" && drop != null) {
+        console.log(!drop.contains(e.target));
+        console.log(!areSiblings(e.target, drop));
+        console.log(e.target);
+        console.log(drop);
+
+        // only runs if a dropdown is active
         // cannot have clicked on the dropdown itself or the arrow (because it'll close it straightaway)
-        if (!drop.contains(e.target) && !e.target.classList.contains("arrow")) {
+        if (!drop.contains(e.target) && !areSiblings(e.target, drop)) {
             drop.id = "";
         }
     }
 });
+
+for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener("click", (e) => {
+        let active = document.querySelector("#drop");
+
+        /* deactivate active dropdown if arrow for another dropdown is clicked */
+        if (active != null && !areSiblings(e.target, active)) {
+            active.id = "";
+        }
+
+        let dd = arrows[i].nextElementSibling;
+        console.dir(dd);
+
+        if (dd.id == "") {
+            dd.id = "drop";
+        } else if (dd.id = "drop") {
+            dd.id = "";
+        }
+    });
+}
