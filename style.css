@@ -4,21 +4,22 @@
 *
 ***********************************************************************/
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    position: relative;
-}
-
 html {
     font-size: 13px;
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+}
+
+
 a {
     text-decoration: none;
-    color: #444;
+    color: inherit;
 }
 
 /* a:visited {} */
@@ -349,12 +350,22 @@ img {
     padding-bottom: 1rem;
     font-family: 'Courier New';
     user-select: none;
+
+
+}
+
+.breadcrumbs {
+    color: rgba(0, 0, 0, .6);
+}
+
+.crumb:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
 }
 
 .arrow {
     font-size: .7em;
     padding-left: .7rem;
-    cursor: pointer;
 }
 
 .dropdown {
