@@ -41,16 +41,6 @@ roles.addEventListener("click", () => cycleRoles(iDescription));
 //         document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
 //     }
 
-<<<<<<< HEAD
-//     if (html.scrollTop == 0) {
-//         document.querySelector(".header").style.boxShadow = "";
-//     }
-// });
-=======
-    if (html.scrollTop == 0) {
-        document.querySelector(".header").style.boxShadow = "";
-    }
-});
 
 /***********************************************************************
  *
@@ -120,4 +110,3 @@ for (let i = 0; i < arrows.length; i++) {
         }
     });
 }
->>>>>>> d07a6a50675c0509408f8668b170c40e963cf163
