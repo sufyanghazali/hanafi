@@ -41,7 +41,83 @@ roles.addEventListener("click", () => cycleRoles(iDescription));
 //         document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
 //     }
 
+<<<<<<< HEAD
 //     if (html.scrollTop == 0) {
 //         document.querySelector(".header").style.boxShadow = "";
 //     }
 // });
+=======
+    if (html.scrollTop == 0) {
+        document.querySelector(".header").style.boxShadow = "";
+    }
+});
+
+/***********************************************************************
+ *
+ *   DROPDOWN
+ * 
+ ***********************************************************************/
+
+const dropdowns = document.querySelectorAll(".drop-wrap");
+
+function areSiblings(e1, e2) {
+    return e1 != e2 && e1.parentNode == e2.parentNode;
+}
+
+function newDiv() {
+    return document.createElement("div");
+}
+
+function createArrow() {
+    let navArrow = document.createElement("div");
+    navArrow.textContent = ">";
+    navArrow.classList.add("arrow");
+    return navArrow;
+}
+
+for (let i = 0; i < dropdowns.length; i++) {
+    let parent = dropdowns[i];
+    newArrow = createArrow();
+    parent.insertBefore(newArrow, parent.firstElementChild.nextSibling);
+}
+
+const arrows = document.querySelectorAll(".arrow");
+
+html.addEventListener("click", e => {
+    let drop = document.querySelector("#drop");
+
+
+    if (typeof (drop) != "undefined" && drop != null) {
+        console.log(!drop.contains(e.target));
+        console.log(!areSiblings(e.target, drop));
+        console.log(e.target);
+        console.log(drop);
+
+        // only runs if a dropdown is active
+        // cannot have clicked on the dropdown itself or the arrow (because it'll close it straightaway)
+        if (!drop.contains(e.target) && !areSiblings(e.target, drop)) {
+            drop.id = "";
+        }
+    }
+});
+
+for (let i = 0; i < arrows.length; i++) {
+    arrows[i].addEventListener("click", (e) => {
+        let active = document.querySelector("#drop");
+
+        /* deactivate active dropdown if arrow for another dropdown is clicked */
+        if (active != null && !areSiblings(e.target, active)) {
+            active.id = "";
+        }
+
+        let dd = arrows[i].nextElementSibling;
+        console.dir(dd);
+
+        if (dd.id == "") {
+            dd.id = "drop";
+        } else if (dd.id = "drop") {
+            dd.id = "";
+        }
+    });
+}
+>>>>>>> d07a6a50675c0509408f8668b170c40e963cf163

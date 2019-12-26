@@ -4,27 +4,25 @@
 *
 ***********************************************************************/
 
+html {
+    font-size: 13px;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     position: relative;
 }
 
-html {
-    font-size: 13px;
-    /* font-family: Helvetica, Arial, sans-serif; */
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-}
 
 a {
     text-decoration: none;
-
+    color: inherit;
 }
 
-a:visited {
-    color: #444;
-}
+/* a:visited {} */
 
 .check {
     border: 1px solid blue;
@@ -154,7 +152,6 @@ a:visited {
     font-size: 18px;
     line-height: 1.4;
     padding-top: 1rem;
-    /* padding-bottom: 5rem; */
 }
 
 .head-xlarge {
@@ -232,7 +229,7 @@ a:visited {
 *
 *   IMAGES
 *
-********************************x   ***************************************/
+***********************************************************************/
 
 img {
     display: block;
@@ -340,6 +337,7 @@ img {
 }
 
 .role:not(:first-child),
+.drop-wrap:not(:first-child),
 .crumb:not(:first-child),
 .crumb:not(:last-child)::after,
 #index-pg::after {
@@ -347,35 +345,49 @@ img {
 }
 
 .breadcrumbs {
+    line-height: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-.crumb {
     font-family: 'Courier New';
+    user-select: none;
+
+
 }
 
-.crumb:not(:last-child)::after,
-#index-pg::after {
-    position: relative;
-    bottom: 1px;
-    content: ">";
+.breadcrumbs {
+    color: rgba(0, 0, 0, .6);
+}
+
+.crumb:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: underline;
+}
+
+.arrow {
     font-size: .7em;
+    padding-left: .7rem;
 }
 
 .dropdown {
-    padding: 1rem;
-    /* position: absolute; */
-    float: right;
-    top: 32.5px;
+    display: none;
+    padding-left: .7rem;
+    position: absolute;
+    left: 100%;
+    top: 100%;
 }
 
 .dropdown,
 .dropdown * {
-    z-index: 1000;
     background: white;
 }
 
+.drop-link {
+    line-height: 2;
+}
+
+#drop {
+    display: block;
+}
 
 /***********************************************************************
 *
