@@ -32,10 +32,14 @@ function bringForward(e) {
             element.style.zIndex -= 10;
         }
     });
-    
+
     e.target.style.zIndex = frontLayer;
 }
 
 $(".drag").draggable({
     containment: "parent"
+});
+
+$(".resize").resizable({
+    aspectRatio: true
 });

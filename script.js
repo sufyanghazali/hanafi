@@ -34,14 +34,14 @@ roles.addEventListener("click", () => cycleRoles(iDescription));
  *
  ***********************************************************************/
 
-const html = document.querySelector("html");
+// const html = document.querySelector("html");
 
-document.addEventListener("scroll", () => {
-    if (html.scrollTop > 0) {
-        document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
-    }
+// document.addEventListener("scroll", () => {
+//     if (html.scrollTop > 0) {
+//         document.querySelector(".header").style.boxShadow = "0px 1px 12px rgba(151, 151, 151, .5)";
+//     }
 
-    if (html.scrollTop == 0) {
-        document.querySelector(".header").style.boxShadow = "";
-    }
-});
+//     if (html.scrollTop == 0) {
+//         document.querySelector(".header").style.boxShadow = "";
+//     }
+// });

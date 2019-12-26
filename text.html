@@ -5,9 +5,10 @@
 <head>
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="./css/text-comp.css" rel="stylesheet">
 </head>
 
-<body class="flex h100">
+<body class="flex">
     <header class="header">
         <div class="container">
             <div id="namebar" class="flex row">
@@ -26,44 +27,13 @@
             </div>
         </div>
     </header>
-    <main class="fl-grow">
-        <div class="container h100">
-            <div class="canvas pb-2">
-                <div class="project drag flex flex-center sortable orange">
-                    <a href="#">
-                        <h2 class="project-name">Placeholder</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable red">
-                    <a href="#">
-                        <h2 class="project-name">Placeholder</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable pink">
-                    <a href="#">
-                        <h2 class="project-name">Placeholder</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable brown">
-                    <a href="#">
-                        <h2 class="project-name">Placeholder</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable green">
-                    <a href="#">
-                        <h2 class="project-name">Compositions</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable yellow">
-                    <a href="in-focus.html">
-                        <h2 class="project-name">In Focus</h2>
-                    </a>
-                </div>
-                <div class="project drag flex flex-center sortable blue">
-                    <a href="temperature.html">
-                        <h2 class="project-name">Temperature</h2>
-                    </a>
-                </div>
+    <main class="">
+        <div class="container">
+            <div class="canvas pb-2 template">
+                 <img src="./images/position.jpg">
+                 <div class="composition-container drag sortable resize">
+                     <img src="images/compositions/1.png">
+                 </div>
             </div>
         </div>
     </main>
