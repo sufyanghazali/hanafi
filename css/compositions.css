@@ -1,0 +1,12 @@
+.composition-container {
+    position: absolute;
+    padding: 30px;
+}
+
+.template {
+    height: 1000px;
+}
+
+.back {
+    z-index: -10;
+}

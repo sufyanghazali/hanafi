@@ -48,6 +48,8 @@ roles.addEventListener("click", () => cycleRoles(iDescription));
  * 
  ***********************************************************************/
 
+/*
+
 const dropdowns = document.querySelectorAll(".drop-wrap");
 
 function areSiblings(e1, e2) {
@@ -94,8 +96,8 @@ html.addEventListener("click", e => {
 for (let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener("click", (e) => {
         let active = document.querySelector("#drop");
-
-        /* deactivate active dropdown if arrow for another dropdown is clicked */
+        
+        // deactivate active dropdown if arrow for another dropdown is clicked 
         if (active != null && !areSiblings(e.target, active)) {
             active.id = "";
         }
@@ -110,3 +112,5 @@ for (let i = 0; i < arrows.length; i++) {
         }
     });
 }
+
+*/
