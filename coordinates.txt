@@ -1,0 +1,39 @@
+Width: 430px
+Height: 286.478px
+Top: 36.1875px
+Left: 106px 
+
+Width: 346.563px
+Height: 434.125px
+Top: 106.875px
+Left: 451px 
+
+Width: 333px
+Height: 434.314px
+Top: 309px
+Left: 767px 
+
+Width: 347px
+Height: 434.98px
+Top: 456px
+Left: 171px 
+
+Width: 430px
+Height: 59.9835px
+Top: 147.672px
+Left: 983px 
+
+Width: 419px
+Height: 433.463px
+Top: 541.641px
+Left: 1180px 
+
+Width: 382px
+Height: 433.516px
+Top: 332px
+tLeft: 1302px 
+
+Width: 429px
+Height: 353.949px
+Top: 686.531px
+Left: 379px 

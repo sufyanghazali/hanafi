@@ -8,7 +8,7 @@
 const cards = document.querySelectorAll(".project");
 
 /* create and fill array of permutation for cards */
-
+/* replace coordinates because those random arrays make no sense */
 const permArray = [
     [
         [randNum(1490), randNum(413)],

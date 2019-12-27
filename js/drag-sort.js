@@ -17,24 +17,41 @@ for (let i = 1; i <= sortables.length; i++) {
 // z-index value for front most layer
 const frontLayer = zIndex.slice(-1)[0];
 
-
 for (let i = 0; i < sortables.length; i++) {
-    sortables[i].addEventListener("mousedown", bringForward);
+
+    sortables[i].ondblclick = function () {
+
+        let currentLayer = this.style.zIndex;
+
+        /* shift elements down */
+        sortables.forEach(element => {
+            /* Only have to sort elements in front of targeted element */
+            if (element.style.zIndex > currentLayer) {
+                element.style.zIndex -= 10;
+            }
+        });
+
+        this.style.zIndex = frontLayer;
+    }
 }
 
-
+/*
 function bringForward(e) {
     let currentLayer = e.target.style.zIndex;
 
+
+    // shift elements down
     sortables.forEach(element => {
-        /* Only have to sort elements in front of targeted element */
+        // Only have to sort elements in front of targeted element 
         if (element.style.zIndex > currentLayer) {
             element.style.zIndex -= 10;
         }
     });
 
+
     e.target.style.zIndex = frontLayer;
 }
+*/
 
 $(".drag").draggable({
     containment: "parent"
