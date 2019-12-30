@@ -4,3 +4,4 @@ Compositions page:
     - can change to make it so its within a range
 - Resize factor is 1.5, animation is 0.2s
 - On hover, border darkens; animation is 0.2s
+- Can get rid of animations
