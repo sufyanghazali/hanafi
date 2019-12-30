@@ -1,0 +1,11 @@
+Challenges:
+Arbitrary placement of elements
+- Lack of scalable/flexible design system to adhere to. Lack of consistency and increased the design and development time.
+- This made that making the website responsive would’ve taken an even longer time to develop. Client was quite adamant too that the audience should view the website at 1080p resolution
+
+Because positioning elements arbitrarily was going to be a thing, I decided that I should set their “position” values to absolute and therefore, everything else should be set to relative. However this became a “problem” when I wanted to implement some interactivity between elements that were not adjacent. 
+
+Instead of simply using combinator selectors, I had to use JavaScript to add classes to the elements after a specific state, i.e. on hover. 
+
+The navbar was inspired by the breadcrumb style of the windows explorer (and many other file explorer interfaces). Initially, the arrows were added as a pseudo-elements. However, I learnt that you aren’t able to query for them using javascript. The solution was to dynamically add the arrows in so that I could implement the dropdown functionality to them. 
+Since arbitrary placement of images was a such a common task, I used jQuery UI to the designer to drag and resize them to their desired location and created a  function to get the necessary style values

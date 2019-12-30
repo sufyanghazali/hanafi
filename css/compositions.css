@@ -53,3 +53,15 @@
     top: 810px;
     left: 379px;
 }
+
+.scale {
+    transform: scale(1.5);
+}
+
+.scale-left {
+    transform-origin: center right;
+}
+
+.scale-right {
+    transform-origin: center left;
+}
