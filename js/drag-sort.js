@@ -53,9 +53,9 @@ $(".drag").draggable({
  **********************************************************************/
 
 $(".resize").resizable({
+    autoHide: true, 
     aspectRatio: true,
     containment: "parent",
     handles: "se",
-    maxWidth: 500,
-    minWidth: $(this).width * .5
+    minWidth: 100   
 });

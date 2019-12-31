@@ -1,12 +1,6 @@
 .composition-container {
     position: absolute;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out,
-                border 0.2s ease-in-out;
-}
-
-.composition-container:hover {
-    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .template {
@@ -27,6 +21,10 @@
 
 .scale-right {
     transform-origin: center left;
+}
+
+.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
+    opacity: 0;
 }
 
 /* POSITIONS */
