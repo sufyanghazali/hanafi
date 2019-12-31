@@ -9,15 +9,17 @@ const halfway = (document.querySelector(".canvas").clientWidth) / 2
 // if position is less than half, scale to right
 
 imageContainers.forEach(image => {
+
     let middle = image.offsetLeft + image.offsetWidth / 2;
-    console.log(middle);
-    console.log(halfway);
+
+    // add class to determine origin of transform
     if (middle > halfway) {
         image.classList.add("scale-left");
     } else if (middle < halfway) {
         image.classList.add("scale-right");
     }
 
+    // toggles resize   
     image.onclick = function () {
         this.classList.toggle("scale");
     }
