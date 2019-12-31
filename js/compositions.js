@@ -9,18 +9,18 @@ const halfway = (document.querySelector(".canvas").clientWidth) / 2
 // if position is less than half, scale to right
 
 imageContainers.forEach(image => {
+    image.classList.add("sortable", "resize");
+//     let middle = image.offsetLeft + image.offsetWidth / 2;
 
-    let middle = image.offsetLeft + image.offsetWidth / 2;
+//     // add class to determine origin of transform
+//     if (middle > halfway) {
+//         image.classList.add("scale-left");
+//     } else if (middle < halfway) {
+//         image.classList.add("scale-right");
+//     }
 
-    // add class to determine origin of transform
-    if (middle > halfway) {
-        image.classList.add("scale-left");
-    } else if (middle < halfway) {
-        image.classList.add("scale-right");
-    }
-
-    // toggles resize   
-    image.onclick = function () {
-        this.classList.toggle("scale");
-    }
+//     // toggles resize   
+//     image.onclick = function () {
+//         this.classList.toggle("scale");
+//     }
 });

@@ -1,8 +1,8 @@
 /***********************************************************************
  *
- *   DRAG FEATURE
+ *   SORT FEATURE
  *
- ***********************************************************************/
+ **********************************************************************/
 
 const sortables = Array.from(document.querySelectorAll(".sortable"));
 
@@ -19,7 +19,7 @@ const frontLayer = zIndex.slice(-1)[0];
 
 for (let i = 0; i < sortables.length; i++) {
 
-    sortables[i].ondblclick = function () {
+    sortables[i].onmousedown = function () {
 
         let currentLayer = this.style.zIndex;
 
@@ -35,28 +35,27 @@ for (let i = 0; i < sortables.length; i++) {
     }
 }
 
-/*
-function bringForward(e) {
-    let currentLayer = e.target.style.zIndex;
-
-
-    // shift elements down
-    sortables.forEach(element => {
-        // Only have to sort elements in front of targeted element 
-        if (element.style.zIndex > currentLayer) {
-            element.style.zIndex -= 10;
-        }
-    });
-
-
-    e.target.style.zIndex = frontLayer;
-}
-*/
+/***********************************************************************
+ *  
+ *  DRAG FEATURE
+ * 
+ **********************************************************************/
 
 $(".drag").draggable({
     containment: "parent"
 });
 
+
+/***********************************************************************
+ *  
+ *  RESIZE FEATURE
+ * 
+ **********************************************************************/
+
 $(".resize").resizable({
-    aspectRatio: true
+    aspectRatio: true,
+    containment: "parent",
+    handles: "se",
+    maxWidth: 500,
+    minWidth: $(this).width * .5
 });
