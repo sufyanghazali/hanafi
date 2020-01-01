@@ -16,3 +16,10 @@ suggestions:
 3.1. for that smallest picture. just make the default slightly larger like 120% and the enlarge like 140%
 
 4. keep border. remove animations.
+
+
+Synthetic page:
+
+- plays on click
+- keeps playing until track ends
+- if another one is clicked, it plays on top
