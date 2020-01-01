@@ -40,47 +40,31 @@ for (let i = 0; i < sortables.length; i++) {
  *   RESIZE FEATURE
  *
  *********************************************************************/
-
-
+const c1 = document.querySelector("#c1");
 const handle = document.querySelector(".handle");
-
-const domRect = function () {
-
-    let image = this.parentNode;
-
-    console.log("clicked");
-    console.dir(this.parentNode);
-    console.dir(this.getBoundingClientRect());
+const resize = function (e) {
+    let mouseChange = e.clientX;
+    image.clientWidth = image.clientWidth + resize;
 }
 
 function getOffset(el) {
     var rect = el.getBoundingClientRect; // returns rect object
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
     // return rect.top + scrollTop and rect.left + scrollLeft
 }
 
+let clickOrigin;
 
 handle.addEventListener("mousedown", function (e) {
-    const MOUSE_ORIGIN = e.x;
-
+    clickOrigin = e.clientX;
+    console.log(clickOrigin);
     let image = this.parentNode;
+    console.dir(image);
+    console.log
 
-    // false because we want to use e from handle listener?
-    document.addEventListener("mousemove", function (el) {
-        let resize = el.x - MOUSE_ORIGIN;
-        console.log(resize);
-        console.log(image.clientWidth);
-        image.clientWidth = image.clientWidth + resize;
-    }, false);
+    document.addEventListener("mousemove", function (e) {
+        image.style.width = image.pageX - image.getBoundingClientRect().left + "px";
+    });
+});
 
-}, false);
-
-document.addEventListener("up", function () {
-    document.removeEventListener("mousemove", function (el) {
-        console.dir(el);
-        let resize = MOUSE_ORIGIN + el.x;
-        image.style.width = `${image.style.width + resize}px`;
-    }, false);
-}, false);
