@@ -27,6 +27,11 @@
     opacity: 0;
 }
 
+.ui-resizable-e {
+    width: 50px;
+    right: -5px;
+}
+
 /* POSITIONS */
 
 #c1 {

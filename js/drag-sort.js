@@ -56,6 +56,6 @@ $(".resize").resizable({
     autoHide: true, 
     aspectRatio: true,
     containment: "parent",
-    handles: "se",
-    minWidth: 100   
+    handles: "e",
+    minWidth: 200   
 });
