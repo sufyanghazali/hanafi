@@ -397,6 +397,7 @@ img {
 
 .canvas {
     padding-top: 1rem;
+    padding-bottom: 2rem;
     height: 100%;
     position: relative;
     z-index: 0;
