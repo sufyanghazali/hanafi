@@ -1,0 +1,21 @@
+.synthetic {
+    height: 790px;
+    width: 1120px;
+    min-width: 600px;
+    background: rgb(0, 0, 255);
+}
+
+.synthetic-container {
+     width: 600px;
+}
+
+.synthetic-line {
+    font-size: 2.5rem;
+    color: white;
+    line-height: 2.5;
+
+}
+
+.synthetic-word {
+    margin: 0 1.5rem;
+}
