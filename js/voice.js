@@ -59,11 +59,12 @@ createText(syntheticArray);
  ***********************************************************************************/
 
 const lines = document.querySelectorAll(".synthetic-line");
+console.log(lines);
 let audioExists = false;
 
-function createAudio() {
-    let srcString = "./audio/Hating.mp3";
-    // let srcString = `${this.children[0].innerText}.mp3`;
+function createAudio(line) {
+    // let srcString = "./audio/Hating.mp3";
+    let srcString = `./audio/${line.id}.mp4`;
     let source = document.createElement("source");
     source.setAttribute("src", srcString);
     let audio = document.createElement("audio");
@@ -73,7 +74,7 @@ function createAudio() {
 }
 
 function loadAudio(line) {
-    let audio = createAudio();
+    let audio = createAudio(line);
     line.appendChild(audio);
     audio.play();
     audioExists = true;
