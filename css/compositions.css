@@ -23,15 +23,6 @@
     transform-origin: center left;
 }
 
-.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
-    opacity: 0;
-}
-
-.ui-resizable-e {
-    width: 50px;
-    right: -5px;
-}
-
 /* POSITIONS */
 
 #c1 {

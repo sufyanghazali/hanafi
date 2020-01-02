@@ -1,0 +1,17 @@
+.supreme-container {
+    width: 100%;
+    height: 100%;
+}
+
+.supreme-images {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-grow:1;
+}
+
+.supreme-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
