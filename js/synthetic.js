@@ -37,11 +37,6 @@ function createLine(lineArray) {
 
 function createText(arr) {
     const container = document.querySelector(".synthetic-container");
-    console.log(container);
-    console.log("hello");
-
-    console.log(arr);
-
     for (let i = 0; i < arr.length; i++) {
         console.log("loop " + i)
         let line = createLine(arr[i]);

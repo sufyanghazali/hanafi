@@ -5,6 +5,7 @@
 ***********************************************************************/
 
 html {
+    min-height: 100%;
     font-size: 13px;
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -694,4 +695,23 @@ img {
 
 .grey {
     background: rgba(0, 0, 0, .75);
+}
+
+
+/***********************************************************************
+*
+*   HIDE/SHOW
+*
+***********************************************************************/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
+
+.page-trigger {
+    background: lightgrey;
 }

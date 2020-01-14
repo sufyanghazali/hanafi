@@ -9,3 +9,10 @@ Instead of simply using combinator selectors, I had to use JavaScript to add cla
 
 The navbar was inspired by the breadcrumb style of the windows explorer (and many other file explorer interfaces). Initially, the arrows were added as a pseudo-elements. However, I learnt that you aren’t able to query for them using javascript. The solution was to dynamically add the arrows in so that I could implement the dropdown functionality to them. 
 Since arbitrary placement of images was a such a common task, I used jQuery UI to the designer to drag and resize them to their desired location and created a  function to get the necessary style values
+
+Part way through the project, the client proposed a restructure of the index page similar to bless.service the content seemingly existed on one page, collapsed in an accordion style menu. Upon clicking a tab on the menu, the page would expand to reveal the content.
+
+Solution:
+ - put the html files in an array and looped through it to add           eventlisteners to all of them
+
+Problem came up for pages that relied on javascript insert most of the content. This meant that i had to create a new function to add the script in after the eventlistener

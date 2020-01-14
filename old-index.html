@@ -8,11 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
-    <link href="./css/compositions.css" rel="stylesheet">
-    <title>Compositions</title>
+    <title>Index</title>
 </head>
 
-<body class="flex">
+<body class="flex h100">
     <header class="header">
         <div class="container">
             <div id="namebar" class="flex row">
@@ -27,36 +26,49 @@
                 <!-- <div class="crumb">This is an index of projects</div> -->
                 <div id="index-pg" class="crumb"><a href="./">Index</a>
                 </div>
-
             </div>
+
+
+        </div>
         </div>
     </header>
-    <main class="">
-        <div class="container">
-            <div id="compositions" class="canvas template">
-                <div id="c1" class="composition-container sortable resize">
-                    <img src="images/compositions/1.png">
+    <main class="fl-grow">
+        <div class="container h100">
+            <div class="canvas">
+                <div class="project drag flex flex-center sortable orange">
+                    <a href="#">
+                        <h2 class="project-name">Placeholder</h2>
+                    </a>
                 </div>
-                <div id="c4" class="composition-container sortable resize">
-                    <img src="images/compositions/4.jpg">
+                <div class="project drag flex flex-center sortable red">
+                    <a href="#">
+                        <h2 class="project-name">Placeholder</h2>
+                    </a>
                 </div>
-                <div id="c2" class="composition-container sortable resize">
-                    <img src="images/compositions/2.jpg">
+                <div class="project drag flex flex-center sortable pink">
+                    <a href="alovesupreme.html">
+                        <h2 class="project-name">A Love Supreme</h2>
+                    </a>
                 </div>
-                <div id="c8" class="composition-container sortable resize">
-                    <img src="images/compositions/8.png">
+                <div class="project drag flex flex-center sortable brown">
+                    <a href="synthetic.html">
+                        <h2 class="project-name">Synthetic</h2>
+                    </a>
                 </div>
-                <div id="c3" class="composition-container sortable resize">
-                    <img src="images/compositions/3.png">
+                <div class="project drag flex flex-center sortable green">
+                    <a href="compositions.html">
+                        <h2 class="project-name">Compositions</h2>
+                    </a>
                 </div>
-                <div id="c5" class="composition-container sortable resize">
-                    <img src="images/compositions/5.png">
+                <div class="project drag flex flex-center sortable yellow">
+                    <a href="in-focus.html">
+                        <h2 class="project-name">In Focus</h2>
+                    </a>
                 </div>
-                <div id="c7" class="composition-container sortable resize">
-                    <img src="images/compositions/7.png">
-                </div>
-                <div id="c6" class="composition-container sortable resize">
-                    <img src="images/compositions/6.png">
+                <div class="project drag flex flex-center sortable blue">
+                    <a href="temperature.html">
+                        <h2 class="project-name">Temperature</h2>
+                    </a>
                 </div>
             </div>
         </div>
@@ -88,9 +100,8 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
         integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-    <script src="./js/compositions.js"></script>
-    <script src="./js/temp-layout.js"></script>
     <script src="./js/drag-sort.js"></script>
+    <script src="./js/permutation.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
