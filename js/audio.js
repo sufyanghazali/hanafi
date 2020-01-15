@@ -6,9 +6,6 @@ CONSIDERATIONS
 
 */
 
-
-
-
 const audio = document.querySelector("#test");
 const target = document.querySelector("#target");
 

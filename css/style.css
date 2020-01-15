@@ -704,6 +704,21 @@ img {
 *
 ***********************************************************************/
 
+
+
+.full-height {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.index-container {
+    margin-top: 0;
+    padding-top: 85px;
+    flex-grow: 1;
+    /* height: 100%; */
+}
+
 .hide {
     display: none;
 }
@@ -715,3 +730,4 @@ img {
 .page-trigger {
     background: lightgrey;
 }
+

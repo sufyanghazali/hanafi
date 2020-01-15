@@ -1,5 +1,5 @@
 
-
+// change query selectors to point to the trigger
 const compositions = document.querySelector("#compositions");
 const synthetic = document.querySelector("#synthetic");
 
@@ -50,11 +50,11 @@ function loadPage(el)
 
 }
 
-function showPage(el)
+function showPage(el, e)
 {
-    // if the page has already been loaded, just toggle visibility
     const container = getContainer(el);
-
+    
+    // if the page has already been loaded, just toggle visibility
     if (container.classList.contains("loaded"))
     {
         container.classList.toggle("show");
@@ -69,9 +69,12 @@ function showPage(el)
 
 array.forEach(el =>
 {
-    el.addEventListener("click", function ()
+    el.addEventListener("click", function (e)
     {
-        showPage(el);
+        if (e.target == el.querySelector(".page-trigger"))
+        {
+            showPage(this, e);
+        }
     });
 });
 

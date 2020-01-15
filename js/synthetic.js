@@ -12,7 +12,8 @@ const syntheticArray = [
     ["(a)", "stylistic", "symmetric", "schematic"]
 ];
 
-function createWord(str) {
+function createWord(str)
+{
     let wrapper = document.createElement("div");
     wrapper.className = "word-wrapper";
 
@@ -24,21 +25,24 @@ function createWord(str) {
     return wrapper;
 }
 
-function createLine(lineArray) {
+function createLine(lineArray)
+{
     let line = document.createElement("div");
     line.className = "synthetic-line";
 
-    for (let i = 0; i < lineArray.length; i++) {
+    for (let i = 0; i < lineArray.length; i++)
+    {
         let word = createWord(lineArray[i]);
         line.appendChild(word);
     }
     return line;
 }
 
-function createText(arr) {
+function createText(arr)
+{
     const container = document.querySelector(".synthetic-container");
-    for (let i = 0; i < arr.length; i++) {
-        console.log("loop " + i)
+    for (let i = 0; i < arr.length; i++)
+    {
         let line = createLine(arr[i]);
         container.appendChild(line);
     }
@@ -57,7 +61,8 @@ const lines = document.querySelectorAll(".synthetic-line");
 console.log(lines);
 let audioExists = false;
 
-function createAudio(line) {
+function createAudio(line)
+{
     // let srcString = "./audio/Hating.mp3";
     let srcString = `./audio/${line.id}.mp4`;
     let source = document.createElement("source");
@@ -68,24 +73,27 @@ function createAudio(line) {
     return audio;
 }
 
-function loadAudio(line) {
+function loadAudio(line)
+{
     let audio = createAudio(line);
     line.appendChild(audio);
     audio.play();
     audioExists = true;
 }
 
-function removeElement(element) {
+function removeElement(element)
+{
     el = document.querySelector(element);
     el.parentNode.removeChild(el);
 }
 
-for (let i = 0; i < lines.length; i++) {
-
-    lines[i].id = `line${i+1}`;
-
-    lines[i].addEventListener("click", function () {
-        if (audioExists) {
+for (let i = 0; i < lines.length; i++)
+{
+    lines[i].id = `line${i + 1}`;
+    lines[i].addEventListener("click", function ()
+    {
+        if (audioExists)
+        {
             removeElement("#audio");
         }
         loadAudio(this);
