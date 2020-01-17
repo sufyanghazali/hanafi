@@ -37,9 +37,9 @@ function loadPage(el)
     xhr.responseType = "document";
     xhr.onload = function ()  
     {
+        // Insert loaded page
         const content = xhr.response.querySelector(`#${id}`);
-        container.classList.add("loaded");
-        container.classList.add("show");
+        container.classList.add("loaded", "show");
         container.appendChild(content);
         if (el == synthetic)
         {
