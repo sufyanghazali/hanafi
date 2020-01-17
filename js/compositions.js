@@ -1,26 +1,72 @@
 const imageContainers = document.querySelectorAll(".composition-container");
 const halfway = (document.querySelector(".canvas").clientWidth) / 2
 
-// add event listener to all images
-// on click
-// get position where the middle of the image
-// if position is over half scale to left
-// if position is on half, scale in position
-// if position is less than half, scale to right
-
 imageContainers.forEach(image => {
-    image.classList.add("sortable", "resize");
-//     let middle = image.offsetLeft + image.offsetWidth / 2;
+    image.classList.add("sortable", "resize", "drag");
 
-//     // add class to determine origin of transform
-//     if (middle > halfway) {
-//         image.classList.add("scale-left");
-//     } else if (middle < halfway) {
-//         image.classList.add("scale-right");
-//     }
+});
 
-//     // toggles resize   
-//     image.onclick = function () {
-//         this.classList.toggle("scale");
-//     }
+/**********************************************************************
+ *   SORT FEATURE
+ *********************************************************************/
+
+const sortables = Array.from(document.querySelectorAll(".sortable"));
+
+// Create array for the z-indexes
+// Initializes the z-indexes of the elements in sortables
+const zIndex = [];
+for (let i = 1; i <= sortables.length; i++)
+{
+    zIndex[i - 1] = i * 10;
+    sortables[i - 1].style.zIndex = Number(zIndex[i - 1]);
+}
+
+// z-index value for front most layer
+const frontLayer = zIndex.slice(-1)[0];
+
+for (let i = 0; i < sortables.length; i++)
+{
+
+    sortables[i].onmousedown = function ()
+    {
+
+        let currentLayer = this.style.zIndex;
+
+        /* shift elements down */
+        sortables.forEach(element =>
+        {
+            /* Only have to sort elements in front of targeted element */
+            if (element.style.zIndex > currentLayer)
+            {
+                element.style.zIndex -= 10;
+            }
+        });
+
+        this.style.zIndex = frontLayer;
+    }
+}
+
+/***********************************************************************
+ *  
+ *  DRAG FEATURE
+ * 
+ **********************************************************************/
+
+$(".drag").draggable({
+    containment: "parent"
+});
+
+
+/***********************************************************************
+ *  
+ *  RESIZE FEATURE
+ * 
+ **********************************************************************/
+
+$(".resize").resizable({
+    autoHide: true,
+    aspectRatio: true,
+    containment: "parent",
+    handles: "e",
+    minWidth: 200
 });

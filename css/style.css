@@ -704,8 +704,9 @@ img {
 *
 ***********************************************************************/
 
-
-
+.page-trigger {
+    padding: 10px;
+}
 .full-height {
     height: 100vh;
     display: flex;
@@ -723,9 +724,9 @@ img {
     display: none;
 }
 
-.show {
+/* .show {
     display: initial;
-}
+} */
 
 .page-trigger {
     background: lightgrey;

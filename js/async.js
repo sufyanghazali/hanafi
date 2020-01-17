@@ -14,7 +14,7 @@ function getLink(el)
 
 function getContainer(el)
 {
-    return document.querySelector(`#${el.id} .container`)
+    return document.querySelector(`#${el.id} .content-container`)
 }
 
 function addScript(el)
@@ -24,7 +24,6 @@ function addScript(el)
     script.src = `./js/${el.id}.js`;
     body.appendChild(script);
 }
-
 
 function loadPage(el)
 {
@@ -39,25 +38,22 @@ function loadPage(el)
     {
         // Insert loaded page
         const content = xhr.response.querySelector(`#${id}`);
-        container.classList.add("loaded", "show");
+        container.dataset.loaded = true;
         container.appendChild(content);
-        if (el == synthetic)
-        {
-            addScript(el);
-        }
+
+        // add assosciated script
+        addScript(el);
     }
     xhr.send();
-
 }
 
-function showPage(el, e)
+function showPage(el)
 {
     const container = getContainer(el);
-    
+
     // if the page has already been loaded, just toggle visibility
-    if (container.classList.contains("loaded"))
+    if (container.dataset.loaded)
     {
-        container.classList.toggle("show");
         container.classList.toggle("hide");
     }
     // else load the page
@@ -73,7 +69,7 @@ array.forEach(el =>
     {
         if (e.target == el.querySelector(".page-trigger"))
         {
-            showPage(this, e);
+            showPage(this);
         }
     });
 });
