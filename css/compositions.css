@@ -5,6 +5,9 @@
 
 .template {
     height: 1300px;
+    /* background-image: url("../images/comp.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; */
 }
 
 .back {
@@ -26,49 +29,49 @@
 /* POSITIONS */
 
 #c1 {
-    width: 430px;
-    top: 36px;
-    left: 106px;
-}
-
-#c2 {
-    width: 347px;
-    top: 107px;
-    left: 451px;
-}
-
-#c3 {
-    width: 333px;
-    top: 309px;
-    left: 767px;
+    width: 424px;
+    top: 26px;
+    left: 103px;
 }
 
 #c4 {
-    width: 347px;
-    top: 456px;
-    left: 171px;
+    width: 346px;
+    top: 481px;
+    left: 80px;
 }
 
-#c5 {
-    width: 516px;
-    top: 148px;
-    left: 983px;
-}
-
-#c6 {
-    width: 419px;
-    top: 630px;
-    left: 1180px;
-}
-
-#c7 {
-    width: 382px;
-    top: 332px;
-    left: 1302px;
+#c2 {
+    width: 266px;
+    top: 247px;
+    left: 382px;
 }
 
 #c8 {
     width: 429px;
-    top: 810px;
-    left: 379px;
+    top: 808px;
+    left: 361px;
+}
+
+#c3 {
+    width: 308px;
+    top: 324px;
+    left: 767px;
+}
+
+#c5 {
+    width: 1660px;
+    top: 88px;
+    left: 0px;
+}
+
+#c7 {
+    width: 382px;
+    top: 361px;
+    left: 1301px;
+}
+
+#c6 {
+    width: 388px;
+    top: 692px;
+    left: 1179px;
 }

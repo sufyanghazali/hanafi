@@ -1,9 +1,34 @@
 const imageContainers = document.querySelectorAll(".composition-container");
-const halfway = (document.querySelector(".canvas").clientWidth) / 2
 
-imageContainers.forEach(image => {
+function getShit(image)
+{
+    const width = image.offsetWidth;
+    const top = image.offsetTop;
+    const left = image.offsetLeft;
+
+    return `#${image.id} {
+width: ${width}px;
+top: ${top}px;
+left: ${left}px;
+}
+
+`;
+}
+
+function getValues()
+{
+    let str = "";
+
+    imageContainers.forEach((image =>
+    {
+        str += getShit(image);
+    }));
+    console.log(str);
+}
+
+imageContainers.forEach(image =>
+{
     image.classList.add("sortable", "resize", "drag");
-
 });
 
 /**********************************************************************
