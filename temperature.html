@@ -6,13 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/temperature.css" rel="stylesheet">
 </head>
 
-<body class="h100">
-    <!-- <header class="header">
+<body class="flex h100">
+    <header class="header">
         <div class="container">
             <div id="namebar" class="flex row">
                 <div><span class="upper">Hans Gazali</span> is a&#x3a;</div>
@@ -36,130 +35,107 @@
             </div>
 
         </div>
-    </header> -->
-    <main class="h100">
-        <div id="temperature" class="temperature">
-            <div class="temperature__track">
-                <!-- <div class="temperature__slide">
-                    <div class="slide__wrapper">
-                        <img id="t1" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_1.jpeg">
-                        <img id="t2" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_2.jpeg">
-                        <img id="t3" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_3.jpeg">
-                        <span id="p11" class="slide__line">warm days</span>
-                        <span id="p12" class="slide__line">juicy fruit</span>
-                        <span id="p13" class="slide__line">dripping chins</span>
-                    </div>
-                </div> -->
-                <div class="temperature__slide">
-                    <div class="slide__wrapper">
-                        <img id="t4" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_4.jpeg">
-                        <img id="t5" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_5.jpeg">
-                        <img id="t6" class="temperature__image"
-                            src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_6.jpeg">
-
-                        <span id="p21" class="slide__line">cooler days come along</span>
-                        <span id="p22" class="slide__line">sheltered under clouds</span>
-                        <span id="p23" class="slide__line">nice to just lay down</span>
-                        <span id="p24" class="slide__line">curled up under a blanket</span>
-                    </div>
-
+    </header>
+    <main id="temperature" class="temperature">
+        <div class="slide__wrapper">
+            <div class="temperature__slide">
+                <div id="t1" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_1.jpeg">
                 </div>
-                <div class="temperature__slide">
-                    <div class="slide__wrapper">
-                    </div>
+                <div id="t2" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_2.jpeg">
                 </div>
-
-                <!-- <div class="temperature__slide">
-                    <img id="t7" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_7.jpeg">
-                    <img id="t8" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_8.jpeg">
-                    <img id="t9" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_9.jpeg">
-                    <span id="p31" class="slide__line">after noon </br>it</br> is</br> afternoon</span>
-                    <span id="p32" class="slide__line">out <br> comes<br> the sun<br> again</span>
-                    <span id="p33" class="slide__line">casting shadows that maketh man</span>
-                    <span id="p34" class="slide__line">a melancholic</span>
+                <div id="t3" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_3.jpeg">
                 </div>
-                <div class="temperature__slide">
-                    <img id="t10" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_10.jpeg">
-                    <img id="t11" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_11.jpeg">
-                    <img id="t12" class="temperature__image"
-                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_12.jpeg">
-                    <span id="p41" class="slide__line">when it rests</span>
-                    <span id="p42" class="slide__line">so shall we, in domestic comforts</span>
-                    <span id="p43" class="slide__line">kick off my shoes</span>
-                    <span id="p44" class="slide__line">pull the curtain</span>
-                </div> -->
-
-                <!-- <div id="t7" class="project-pic t7"><img
+                <div id="t4" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_4.jpeg">
+                </div>
+                <div id="t5" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_5.jpeg">
+                </div>
+                <div id="t6" class="temperature__image"><img
+                        src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_6.jpeg">
+                </div>
+                <div id="t7" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_7.jpeg">
                 </div>
-                <div id="t8" class="project-pic t8"><img
+                <div id="t8" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_8.jpeg">
                 </div>
-                <div id="t9" class="project-pic t9"><img
+                <div id="t9" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_9.jpeg">
                 </div>
-                <div id="t10" class="project-pic t10"><img
+                <div id="t10" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_10.jpeg">
                 </div>
-                <div id="t11" class="project-pic t11"><img
+                <div id="t11" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_11.jpeg">
                 </div>
-                <div id="t12" class="project-pic t12"><img
+                <div id="t12" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_12.jpeg">
                 </div>
-                <div id="t13" class="project-pic t13"><img
+                <div id="t13" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_13.jpeg">
                 </div>
-                <div id="t14" class="project-pic t14"><img
+                <div id="t14" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_14.jpeg">
                 </div>
-                <div id="t15" class="project-pic t15"><img
+                <div id="t15" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_15.jpeg">
                 </div>
-                <div id="t16" class="project-pic t16"><img
+                <div id="t16" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_16.jpeg">
                 </div>
-                <div id="t17" class="project-pic t17"><img
+                <div id="t17" class="temperature__image"><img
                         src="images/WEB_PORTFOLIO_ASSETS/temperature/temperature_17.jpeg">
-                </div> -->
-                <//div> </div> </main> <!-- <footer>
-                <div class="container">
-                    <div class="contact grid">
-                        <div class="flex row">
-                            <div class="block grey"></div>
-                            <div class="section">
-                                <div>Contact</div>
-                                <div>040493h@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="flex row">
-                            <div class="block grey"></div>
-                            <div class="section">
-                                <div>Instagram</div>
-                                <div>
-                                    <a href="https://www.instagram.com/saint.marfa/" target="_blank">@saint.marfa
-                                    </a>
-                                </div>
-                            </div>
+                </div>
+                <!--
+                <span id="p11" class="line">warm days</span>
+                <span id="p12" class="line">juicy fruit</span>
+                <span id="p13" class="line">dripping chins</span>
+                <span id="p21" class="line">cooler days come along</span>
+                <span id="p22" class="line">sheltered under clouds</span>
+                <span id="p23" class="line">nice to just lay down</span>
+                <span id="p24" class="line">curled up under a blanket</span>
+                <span id="p31" class="line">after noon </br>it</br> is</br> afternoon</span>
+                <span id="p32" class="line">out <br> comes<br> the sun<br> again</span>
+                <span id="p33" class="line">casting shadows that maketh man</span>
+                <span id="p34" class="line">a melancholic</span>
+                <span id="p41" class="line">when it rests</span>
+                <span id="p42" class="line">so shall we, in domestic comforts</span>
+                <span id="p43" class="line">kick off my shoes</span>
+                <span id="p44" class="line">pull the curtain</span>
+    -->
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="contact grid">
+                <div class="flex row">
+                    <div class="block grey"></div>
+                    <div class="section">
+                        <div>Contact</div>
+                        <div>040493h@gmail.com</div>
+                    </div>
+                </div>
+                <div class="flex row">
+                    <div class="block grey"></div>
+                    <div class="section">
+                        <div>Instagram</div>
+                        <div>
+                            <a href="https://www.instagram.com/saint.marfa/" target="_blank">@saint.marfa
+                            </a>
                         </div>
                     </div>
                 </div>
-                </footer> -->
-                <script src="https://code.jquery.com/jquery-3.4.1.js"
-                    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-                    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-                <script src="./js/temperature.js"></script>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/temperature.js"></script>
 </body>
 
 </html>
