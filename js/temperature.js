@@ -93,7 +93,7 @@ temperature.addEventListener("click", function ()
     console.log("clicked");
     console.log(slide.style.top);
     const offset = Number(slide.style.top.slice(0, -2));
-    slide.style.top = offset + 50 + "px";
+    slide.style.top = offset - 50 + "px";
 
 });
 
