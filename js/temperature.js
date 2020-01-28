@@ -77,17 +77,45 @@ function getAdjusted()
 
 const temperature = document.querySelector(".temperature");
 const slide = temperature.querySelector(".slide__wrapper");
-const path = [[0, 0], [-632, 66], [-779, -1172], [-947, -2283], [-2064,-3364],[-2385,-4271]];
+const path = [[0, 0], [-632, 66], [-779, -1172], [-947, -2283], [-2064, -3364], [-2385, -4271]];
 const frames = []; // map new frame values usi ng values from path array
 let iPath = 0;
-
 slide.style.top = "0px";
 
+
+function initializeFrames()
+{
+    for (let i = 0; i < path.length; i++)
+    {
+        console.log("hello");
+
+        // push the main frame first
+        frames.push(path[i]);
+
+        // push the inbetween frames
+        if (i < path.length - 1)
+        {
+            // setup for 2 "inbetween" frames
+            const diffTop = path[i + 1][0] - path[i][0];
+            const diffLeft = path[i + 1][1] - path[i][1];
+            const moveTop = diffTop / 3;
+            const moveLeft = diffLeft / 3;
+
+            for (let j = 1; j < 3; j++)
+            {
+                nextTop = path[i][0] + moveTop * j;
+                nextLeft = path[i][1] + moveLeft * j;
+
+                frames.push([nextTop, nextLeft]);
+            }
+        }
+    }
+}
 
 function travel()
 {
     console.log("clicked");
-    if (iPath == path.length - 1)
+    if (iPath == frames.length - 1)
     {
         iPath = 0;
     }
@@ -96,11 +124,11 @@ function travel()
         iPath++;
     }
 
-    slide.style.top = `${path[iPath][0]}px`;
-    slide.style.left = `${path[iPath][1]}px`;
+    slide.style.top = `${frames[iPath][0]}px`;
+    slide.style.left = `${frames[iPath][1]}px`;
 }
 
-
+initializeFrames();
 temperature.addEventListener("click", travel);
 
 $(".drag").draggable();

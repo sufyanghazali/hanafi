@@ -3,7 +3,8 @@
     overflow: hidden;
     margin: 0 5rem;
     /* padding-top: 130px; */   
-    height: 100vh
+    height: 100vh;
+    user-select: none;
 }
 
 .slide__wrapper {
