@@ -62,19 +62,11 @@ function getAdjusted()
     console.log(str);
 }
 
-temps.forEach(image =>
-{
-    image.classList.add("drag");
-});
 // lines.forEach(line =>
 // {
 //     line.classList.add("drag");
 // });
 
-
-// $(".drag").draggable({
-//     containment: "parent"
-// });
 
 
 /***********************************************************************
@@ -85,15 +77,36 @@ temps.forEach(image =>
 
 const temperature = document.querySelector(".temperature");
 const slide = temperature.querySelector(".slide__wrapper");
+const path = [[0, 0], [-632, 66], [-779, -1172], [-947, -2283], [-2064,-3364],[-2385,-4271]];
+const frames = []; // map new frame values usi ng values from path array
+let iPath = 0;
 
 slide.style.top = "0px";
 
-temperature.addEventListener("click", function ()
+
+function travel()
 {
     console.log("clicked");
+    if (iPath == path.length - 1)
+    {
+        iPath = 0;
+    }
+    else
+    {
+        iPath++;
+    }
+
+    slide.style.top = `${path[iPath][0]}px`;
+    slide.style.left = `${path[iPath][1]}px`;
+}
+
+
+temperature.addEventListener("click", travel);
+
+$(".drag").draggable();
+
+function getSlide()
+{
     console.log(slide.style.top);
-    const offset = Number(slide.style.top.slice(0, -2));
-    slide.style.top = offset - 200 + "px";
-
-});
-
+    console.log(slide.style.left);
+}
