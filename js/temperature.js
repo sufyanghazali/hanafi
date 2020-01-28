@@ -131,7 +131,7 @@ function travel()
 initializeFrames();
 temperature.addEventListener("click", travel);
 
-$(".drag").draggable();
+// $(".drag").draggable();
 
 function getSlide()
 {
