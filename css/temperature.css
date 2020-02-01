@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     margin: 0 5rem;
-    /* padding-top: 130px; */   
+    /* padding-top: 130px; */
     height: 100vh;
     user-select: none;
 }
@@ -25,108 +25,109 @@
 *   IMAGES
 *
 ***********************************************************************/
-
+/*31
++29 */
 /* added 150px to top */
 #t1 {
-    width: 353px;
-    top: 239px;
-    left: 271px;
+    width: 324px;
+    top: 295px;
+    left: 305px;
 }
 
 #t2 {
-    width: 375px;
-    top: 167px;
-    left: 695px;
+    width: 348px;
+    top: 235px;
+    left: 709px;
 }
 
 #t3 {
-    width: 478px;
-    top: 258px;
-    left: 1158px;
+    width: 444px;
+    top: 287px;
+    left: 1145px;
 }
 
 #t4 {
-    width: 366px;
-    top: 835px;
-    left: 456px;
+    width: 356px;
+    top: 947px;
+    left: 329px;
 }
 
 #t5 {
-    width: 364px;
-    top: 958px;
-    left: 866px;
+    width: 352px;
+    top: 1075px;
+    left: 757px;
 }
 
 #t6 {
-    width: 406px;
-    top: 1066px;
-    left: 1271px;
+    width: 376px;
+    top: 1171px;
+    left: 1193px;
 }
 
 #t7 {
-    width: 768px;
-    top: 903px;
-    left: 1789px;
+    width: 608px;
+    top: 1071px;
+    left: 2509px;
 }
 
 #t8 {
-    width: 414px;
-    top: 1077px;
-    left: 2639px;
+    width: 372px;
+    top: 1179px;
+    left: 4045px;
 }
 
 #t9 {
-    width: 405px;
-    top: 1092px;
-    left: 3105px;
+    width: 376px;
+    top: 1179px;
+    left: 4533px;
 }
 
 #t10 {
-    width: 692px;
-    top: 1516px;
-    left: 3542px;
+    width: 496px;
+    top: 1175px;
+    left: 5041px;
 }
 
 #t11 {
-    width: 445px;
-    top: 1594px;
-    left: 4291px;
+    width: 360px;
+    top: 1183px;
+    left: 5657px;
 }
 
 #t12 {
-    width: 380px;
-    top: 2337px;
-    left: 3416px;
+    width: 324px;
+    top: 2091px;
+    left: 4541px;
 }
 
 #t13 {
-    width: 383px;
-    top: 2226px;
-    left: 3857px;
+    width: 332px;
+    top: 1935px;
+    left: 4929px;
 }
 
 #t14 {
-    width: 389px;
-    top: 2198px;
-    left: 4316px;
+    width: 316px;
+    top: 2071px;
+    left: 5317px;
 }
 
 #t15 {
-    width: 388px;
-    top: 2396px;
-    left: 4753px;
+    width: 344px;
+    top: 2171px;
+    left: 5697px;
 }
 
 #t16 {
-    width: 369px;
-    top: 2643px;
-    left: 5176px;
+    width: 364px;
+    top: 2835px;
+    left: 5165px;
 }
 
 #t17 {
-    width: 367px;
-    top: 2761px;
-    left: 5622px;
+    width: 364px;
+    top: 3611px;
+    left: 5165px;
 }
 
 /***********************************************************************
