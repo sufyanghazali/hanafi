@@ -10,6 +10,8 @@
 .slide__wrapper {
     position: absolute;
     top: 0;
+    height: 50000px;
+    width: 50000px;
 }
 
 .temperature__slide {
@@ -18,6 +20,17 @@
 
 .temperature__image {
     position: absolute;
+}
+
+.button {
+    position: absolute;
+    z-index: 1000;
+    /* top: 300px; */
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background: blue;
+    color: white;
 }
 
 /***********************************************************************
@@ -136,7 +149,7 @@
 *
 ***********************************************************************/
 
-.line {
+.slide__line {
     font-family: 'Courier New', Courier, monospace;
     display: block;
     font-size: 15px;
@@ -144,77 +157,80 @@
     width: 400px;
 }
 
-#p11 {
-    left: 600.56px;
-    top: -70px;
+
+#l11 {
+    top: 500px;
+    left: 0;
 }
 
-#p12 {
-    left: 632.56px;
-    top: -30px;
+#l12 {
+    top: 520px;
+    left: 0;
 }
 
-#p13 {
-    left: 643.56px;
-    top: 6px;
+
+#l13 {
+    top: 540px;
+    left: 0;
 }
 
-#p21 {
-    left: 1031.56px;
-    top: 84px;
+
+#l21 {
+    top: 1000px;
+    left: 70px;
 }
 
-#p22 {
-    left: 1032.56px;
-    top: 117px;
+#l22 {
+    top: 1020px;
+    left: 70px;
 }
 
-#p23 {
-    left: 1041.56px;
-    top: 616px;
+#l23 {
+    top: 1040px;
+    left: 70px;
 }
 
-#p24 {
-    left: 1862.56px;
-    top: 342px;
+#l24 {
+    top: 1060px;
+    left: 70px;
 }
 
-#p31 {
-    left: 2487.56px;
-    top: 117px;
+#l31 {
+    left: 2292px;
+    top: 1236px;
 }
 
-#p32 {
-    left: 2768.56px;
-    top: 121px;
+#l32 {
+    left: 2292px;
+    top: 1336px;
 }
 
-#p33 {
-    left: 3669.56px;
-    top: 940px;
+#l33 {
+    left: 4581.44px;
+    top: 1670px;
 }
 
-#p34 {
-    left: 2869.44px;
-    top: 980px;
+#l34 {
+    left: 4517.55px;
+    top: 1710px;
 }
 
-#p41 {
-    left: 3515.44px;
-    top: 2050px;
+#l41 {
+    left: 5042.44px;
+    top: 2338px;
 }
 
-#p42 {
-    left: 4832.56px;
-    top: 2128px;
+#l42 {
+    left: 5285.55px;
+    top: 2527px;
 }
 
-#p43 {
-    left: 5792.56px;
-    top: 2550px;
+#l43 {
+    left: 5271.55px;
+    top: 2790px;
 }
 
-#p44 {
-    left: 6211.56px;
-    top: 2063px;
+#l44 {
+    left: 5276.55px;
+    top: 3556px;
 }

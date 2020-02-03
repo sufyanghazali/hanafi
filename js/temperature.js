@@ -35,7 +35,7 @@ function getValues()
 }
 
 
-function adjust(image)
+function adjust(image, x, y)
 {
     const width = image.offsetWidth;
     const top = image.offsetTop;
@@ -43,8 +43,8 @@ function adjust(image)
 
     return `#${image.id} {
 width: ${width}px;
-top: ${top + 31}px;
-left: ${left + 29}px;
+top: ${top + x}px;
+left: ${left + y}px;
 }
 
 `;
@@ -56,7 +56,7 @@ function getAdjusted()
 
     temps.forEach((image =>
     {
-        str += adjust(image);
+        str += adjust(image, 31, 29);
     }));
 
     console.log(str);
@@ -135,9 +135,10 @@ function travel()
     slide.style.left = `${frames[iPath][1]}px`;
 }
 
-initializeFrames(3);
-console.log(frames);
-temperature.addEventListener("click", travel);
+// initializeFrames(3);
+const button = document.querySelector(".button");
+button.addEventListener("click", travel);
+// temperature.addEventListener("click", travel);
 
 
 
@@ -152,6 +153,47 @@ function getSlide()
 // {
 //     image.classList.add("resize", "drag");
 // });
+
+
+/********************************************************************
+ * 
+ *  goddamn fucking lines
+ * 
+ */
+
+// make lines draggable
+lines.forEach(line =>
+{
+    line.classList.add("drag");
+})
+
+function shiftLines(line, x, y)
+{
+    const top = line.offsetTop;
+    const left = line.offsetLeft;
+
+    return `#${line.id} {
+top: ${top + x}px;
+left: ${left + y}px;
+}
+
+`;
+}
+
+function adjustLines(x, y)
+{
+    let str = "";
+
+    lines.forEach(line =>
+    {
+        console.log('hello');
+        str += adjust(image, x, y);
+    });
+
+    console.log(str);
+}
+
+
 
 
 $(".drag").draggable();
