@@ -24,6 +24,8 @@
 
 .lines {
     position: absolute;
+    background: pink;
+    opacity: 0.5;
     width: 500px;
     height: 200px;
     bottom: 20px;
