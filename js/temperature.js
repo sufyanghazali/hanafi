@@ -133,11 +133,12 @@ function travel()
     slide.style.left = `${frames[iPath][1]}px`;
 }
 
-const button = document.querySelector(".button");
-button.addEventListener("click", travel);
+// uncomment for testing
+// const button = document.querySelector(".button");
+// button.addEventListener("click", travel);
 
-// uncomment after placing lines
-// temperature.addEventListener("click", travel);
+// uncomment after finalizing line positions
+temperature.addEventListener("click", travel);
 
 
 
