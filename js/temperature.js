@@ -16,8 +16,6 @@ left: ${left}px;
 `;
 }
 
-
-
 function getValues()
 {
     let str = "";
@@ -135,9 +133,10 @@ function travel()
     slide.style.left = `${frames[iPath][1]}px`;
 }
 
-// initializeFrames(3);
 const button = document.querySelector(".button");
 button.addEventListener("click", travel);
+
+// uncomment after placing lines
 // temperature.addEventListener("click", travel);
 
 
@@ -162,10 +161,10 @@ function getSlide()
  */
 
 // make lines draggable
-lines.forEach(line =>
-{
-    line.classList.add("drag");
-})
+// lines.forEach(line =>
+// {
+//     line.classList.add("drag");
+// })
 
 function shiftLines(line, x, y)
 {
