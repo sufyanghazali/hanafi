@@ -70,7 +70,8 @@ function getAdjusted()
 const temperature = document.querySelector(".temperature");
 const slide = temperature.querySelector(".slide__wrapper");
 const path = [[0, 0], [-751, -69], [-873, -1951], [-873, -3958], [-873, -4361], [-1793, -4413], [-2601, -4454], [-3388, -4454]];
-
+let iPath = 0;
+slide.style.top = "0px";
 
 const frames = [
     [0, 0], [-250, -23], [-500, -46],
@@ -82,13 +83,7 @@ const frames = [
     [-2601, -4454], [-2863, -4454], [-3125, -4454],
     [-3388, -4454]
 ];
-
-
-
-const frames2 = []; // map new frame values usi ng values from path array
-let iPath = 0;
-slide.style.top = "0px";
-
+const frames2 = []; // map new frame values using values from path array
 
 function initializeFrames(numFrames)
 {
@@ -120,7 +115,7 @@ function initializeFrames(numFrames)
 function travel()
 {
     console.log("clicked");
-    if (iPath == frames.length - 1)
+    if (iPath == path.length - 1)
     {
         iPath = 0;
     }
@@ -129,8 +124,8 @@ function travel()
         iPath++;
     }
 
-    slide.style.top = `${frames[iPath][0]}px`;
-    slide.style.left = `${frames[iPath][1]}px`;
+    slide.style.top = `${path[iPath][0]}px`;
+    slide.style.left = `${path[iPath][1]}px`;
 }
 
 // uncomment for testing
@@ -139,8 +134,6 @@ function travel()
 
 // uncomment after finalizing line positions
 temperature.addEventListener("click", travel);
-
-
 
 function getSlide()
 {
@@ -159,7 +152,7 @@ function getSlide()
  * 
  *  goddamn fucking lines
  * 
- */
+ *******************************************************************/
 
 // make lines draggable
 // lines.forEach(line =>
@@ -192,8 +185,6 @@ function adjustLines(x, y)
 
     console.log(str);
 }
-
-
 
 
 $(".drag").draggable();

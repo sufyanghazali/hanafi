@@ -258,15 +258,25 @@
     top: 35px;
     left: 0px;
 }
-
 #l43 {
-    top: 50%;
-    transform: translateY(-50%);
-    left: -300px;
+    top: 70px;
+    left: 0px;
 }
 
 #l44 {
     top: 50%;
     transform: translateY(-50%);
+    left: -300px;
+}
+
+#l45 {
+    top: 50%;
+    transform: translateY(-50%);
     left: -350px;
+}
+
+#l46 {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 500px;
 }
